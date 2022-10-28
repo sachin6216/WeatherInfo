@@ -31,5 +31,4 @@ class HomeViewModel {
             controller.showalertview(messagestring: errorMsg ?? "")
         }
     }
-    
 }

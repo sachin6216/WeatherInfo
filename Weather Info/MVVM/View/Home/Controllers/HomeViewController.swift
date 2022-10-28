@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lblWind: UILabel!
     @IBOutlet weak var lblPrep: UILabel!
     @IBOutlet weak var lblPressure: UILabel!
+
     // MARK: - Variables
     var viewModel = HomeViewModel()
     private var subscriptions = Set<AnyCancellable>() //Cancellation
@@ -45,13 +46,13 @@ class HomeViewController: UIViewController {
         Localize.setCurrentLanguage("En")
         
         self.imgWeatherIcon.layer.cornerRadius = self.imgWeatherIcon.frame.height / 2
+
         self.bgView.layer.cornerRadius = 10
         self.bgView.layer.borderColor = #colorLiteral(red: 0.3761256337, green: 0.5008631945, blue: 0.5802932382, alpha: 1)
         self.bgView.layer.borderWidth = 3.5
         let imgView = UIImageView.init(frame: self.view.frame)
         imgView.image = #imageLiteral(resourceName: "mountains")
-        self.view.insertSubview(imgView, at: 0)
-        
+        self.view.insertSubview(imgView, at: 0)        
         self.lblWind.text = "WIND".localized()
     }
     // MARK: - APIs
