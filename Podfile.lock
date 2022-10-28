@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (5.6.2)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
@@ -7,20 +13,23 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Localize-Swift (~> 3.2)
   - NVActivityIndicatorView (~> 4.8.0)
   - ReachabilitySwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Localize-Swift
     - NVActivityIndicatorView
     - ReachabilitySwift
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
 
-PODFILE CHECKSUM: 401b9cc975b7bab1217a750b3ac4f1d9e7d501ca
+PODFILE CHECKSUM: aff1c77d5366743a26a39f0e994dc62794dba1b1
 
 COCOAPODS: 1.11.3

@@ -617,3 +617,36 @@ extension String {
     }
     
 }
+extension UIViewController {
+    func showalertview(messagestring: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: nil, message: messagestring, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+extension UIImageView {
+    func loadFrom(URLAddress: String) {
+        guard let url = URL(string: URLAddress) else {
+            return
+        }
+        
+        
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+
+                    if error != nil {
+                        print(error ?? "No Error")
+                        return
+                    }
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        if let dataImg = data {
+                            let image = UIImage(data: dataImg)
+                            self.image = image
+                        }
+                       
+                    })
+
+                }).resume()        
+    }
+}

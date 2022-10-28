@@ -26,5 +26,11 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app will acess your location in order to provide results based on your current location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app will acess your location in order to provide results based on your current location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app will acess your location in order to provide results based on your current location.</string>
 </dict>
 </plist>
