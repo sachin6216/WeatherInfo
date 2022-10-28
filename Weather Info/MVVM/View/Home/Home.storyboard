@@ -161,9 +161,12 @@
                         <outlet property="imgWeatherIcon" destination="Q71-gL-irh" id="IZg-DO-wH4"/>
                         <outlet property="lblLoc" destination="PF7-tz-Mdg" id="PBC-Uw-nFg"/>
                         <outlet property="lblPrecpValue" destination="29k-vp-jeX" id="6ot-l6-EvD"/>
+                        <outlet property="lblPrep" destination="7vy-bY-Quu" id="bpj-TS-4Pj"/>
+                        <outlet property="lblPressure" destination="oZ5-NF-uc3" id="lAh-rU-zum"/>
                         <outlet property="lblPressureValue" destination="oZ5-NF-uc3" id="tlL-AS-Vb1"/>
                         <outlet property="lblTemp" destination="BPw-k6-Ihq" id="rhJ-r4-Uje"/>
                         <outlet property="lblWeatherStatus" destination="7kb-bY-ul7" id="1Vg-ad-uJ4"/>
+                        <outlet property="lblWind" destination="bnD-IU-Svq" id="YVt-2W-MVM"/>
                         <outlet property="lblWindValue" destination="dda-Ib-OPq" id="WnZ-GO-DaT"/>
                     </connections>
                 </viewController>

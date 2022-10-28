@@ -9,5 +9,6 @@ target 'Weather Info' do
 pod 'Alamofire'
 pod 'ReachabilitySwift'
 pod 'NVActivityIndicatorView' , '~> 4.8.0'
+pod 'Localize-Swift', '~> 3.2'
 
 end
