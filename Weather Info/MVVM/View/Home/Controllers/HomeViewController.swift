@@ -62,7 +62,6 @@ class HomeViewController: UIViewController {
     
     /// Set UI properties
     func setUITheme() {
-        
         self.imgWeatherIcon.layer.cornerRadius = self.imgWeatherIcon.frame.height / 2
         self.bgView.layer.cornerRadius = 20
         self.bgView.layer.shadowColor = UIColor.lightGray.cgColor
