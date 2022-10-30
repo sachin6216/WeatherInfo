@@ -628,6 +628,7 @@ extension UIViewController {
     }
 }
 extension UIImageView {
+    /// Get the image data from the URL
     func loadFrom(URLAddress: String) {
         guard let url = URL(string: URLAddress) else {
             return

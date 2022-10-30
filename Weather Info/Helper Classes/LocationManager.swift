@@ -31,6 +31,7 @@ class LocationManager: NSObject {
         self.locationManager?.requestAlwaysAuthorization()
     }
     // MARK: - Start Updating Locations
+    /// Get Location request from the user
     func startUpdatingLocation() {
         if CLLocationManager.authorizationStatus() == .notDetermined || CLLocationManager.authorizationStatus() == .denied || CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||  CLLocationManager.authorizationStatus() == .restricted {
             self.locationManager?.requestAlwaysAuthorization()
