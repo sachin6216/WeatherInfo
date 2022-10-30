@@ -6,3 +6,7 @@
   
 */
 "WIND" = "Wind";
+"PRECIPTION" = "Precipitation";
+"PRESSURE" = "Pressure";
+"OK" = "Ok";
+"WEATHERINFO" = "Weather Info";
