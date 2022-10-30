@@ -28,7 +28,7 @@ class ApiManager: NSObject {
     
     func executeQuery<T>(completion: @escaping (_ model: T) -> Void, error errorCallBack: ((String?) -> Void)? = nil) where T: Codable {
         if Connectivity.isConnectedToInternet {
-            AF.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseData(completionHandler: { response in
+            AF.request(url, method: method, parameters: parameters, encoding: encoding, headers: nil).responseData(completionHandler: { response in
                 self.handleResponse(response: response, completion: completion, error: errorCallBack)
             })
         }else{
@@ -130,13 +130,6 @@ class ApiManager: NSObject {
                         print(error)
                         Logger.sharedInstance.logMessage(message: error.localizedDescription)
                         errorCallBack?("")
-#if DEBUG
-                        //                        errorCallBack?((self.errorHandler(data: response.data ?? Data()) ?? "")
-                        //                                       + "\n Status code: \(code)"
-                        //                                       + "\n \(error.localizedDescription)")
-#else
-                        //                        errorCallBack?("\(error.)")
-#endif
                         
                     }
                 case 403, 401:
@@ -165,12 +158,9 @@ class ApiManager: NSObject {
 #endif
                 default:
                     print("\(code): That's an error")
-                    // let error = NSError(domain: response.debugDescription, code: code, userInfo: response.response?.allHeaderFields as? [String: Any])
-                    //errorCallBack?("\(code): That's an error")
                 }
             }
         case .failure(let error):
-         //   errorCallBack!(error.localizedDescription)
             errorCallBack?("Sorry there were some technical issue while processing your request")
         }
     }

@@ -7,7 +7,7 @@
 import UIKit
 import CoreLocation
 import Alamofire
-@objc protocol LocationManagerDelegate: class {
+@objc protocol LocationManagerDelegate: AnyObject {
     @objc optional func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     @objc optional func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
     @objc optional func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)

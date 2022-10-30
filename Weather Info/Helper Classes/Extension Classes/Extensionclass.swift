@@ -1,4 +1,5 @@
 import UIKit
+import Localize_Swift
 func getMainQueue(block: @escaping () -> Void) {
     DispatchQueue.main.async {
         block()
@@ -621,7 +622,7 @@ extension UIViewController {
     func showalertview(messagestring: String) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: nil, message: messagestring, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK".localized(), style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }

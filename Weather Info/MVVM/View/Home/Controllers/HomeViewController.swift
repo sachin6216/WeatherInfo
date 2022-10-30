@@ -11,7 +11,7 @@ import CoreLocation
 import Localize_Swift
 
 class HomeViewController: UIViewController {
-
+    
     // MARK: - Properties
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var lblLoc: UILabel!
@@ -24,7 +24,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lblWind: UILabel!
     @IBOutlet weak var lblPrep: UILabel!
     @IBOutlet weak var lblPressure: UILabel!
-
+    
+    @IBOutlet weak var lblHeader: UILabel!
+    @IBOutlet weak var btnSwitchLang: UISwitch!
     // MARK: - Variables
     var viewModel = HomeViewModel()
     private var subscriptions = Set<AnyCancellable>() //Cancellation
@@ -41,19 +43,37 @@ class HomeViewController: UIViewController {
     @IBAction func btnReload(_ sender: UIButton) {
         self.viewModel.getCurrentWeather(controller: self)
     }
+    @IBAction func btnSwitchAct(_ sender: UISwitch) {
+        if sender.isOn {
+            Localize.setCurrentLanguage("hi")
+        } else {
+            Localize.setCurrentLanguage("En")
+        }
+        self.setLocalization()
+    }
     // MARK: - Extra functions
+    fileprivate func setLocalization() {
+        self.lblWind.text = "WIND".localized()
+        self.lblPrep.text = "PRECIPTION".localized()
+        self.lblPressure.text = "PRESSURE".localized()
+        self.lblHeader.text = "WEATHERINFO".localized()
+    }
+    
     func setUITheme() {
-        Localize.setCurrentLanguage("En")
         
         self.imgWeatherIcon.layer.cornerRadius = self.imgWeatherIcon.frame.height / 2
-
-        self.bgView.layer.cornerRadius = 10
-        self.bgView.layer.borderColor = #colorLiteral(red: 0.3761256337, green: 0.5008631945, blue: 0.5802932382, alpha: 1)
-        self.bgView.layer.borderWidth = 3.5
+        
+        self.bgView.layer.cornerRadius = 20
+        self.bgView.layer.shadowColor = UIColor.lightGray.cgColor
+        self.bgView.layer.shadowOffset = .zero
+        self.bgView.layer.shadowRadius = 10
+        self.bgView.layer.shadowOpacity = 0.6
         let imgView = UIImageView.init(frame: self.view.frame)
         imgView.image = #imageLiteral(resourceName: "mountains")
-        self.view.insertSubview(imgView, at: 0)        
-        self.lblWind.text = "WIND".localized()
+        self.view.insertSubview(imgView, at: 0)
+        setLocalization()
+        
+        self.btnSwitchLang.isOn = Localize.currentLanguage() == "hi" ? true : false
     }
     // MARK: - APIs
     func subscribers() {
