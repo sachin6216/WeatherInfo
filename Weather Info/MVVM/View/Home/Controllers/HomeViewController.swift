@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var btnSwitchLang: UISwitch!
+    @IBOutlet weak var btnSWitchMode: UISwitch!
     // MARK: - Variables
     var viewModel = HomeViewModel()
     private var subscriptions = Set<AnyCancellable>()
@@ -43,12 +44,19 @@ class HomeViewController: UIViewController {
     @IBAction func btnReload(_ sender: UIButton) {
         self.viewModel.getCurrentWeather(controller: self)
     }
-    @IBAction func btnSwitchAct(_ sender: UISwitch) {
+    @IBAction func btnSWitchModeAct(_ sender: UISwitch) {
+        let appDelegate = UIApplication.shared.windows.first
         if sender.isOn {
-            Localize.setCurrentLanguage("hi")
-        } else {
-            Localize.setCurrentLanguage("En")
+            appDelegate?.overrideUserInterfaceStyle = .dark
+            UserDefaults.standard.setValue(true, forKey: "isDarkEnable")
+            return
         }
+        UserDefaults.standard.setValue(false, forKey: "isDarkEnable")
+        appDelegate?.overrideUserInterfaceStyle = .light
+    }
+    @IBAction func btnSwitchAct(_ sender: UISwitch) {
+        
+        Localize.setCurrentLanguage(sender.isOn ? "hi" : "En")
         self.setLocalization()
     }
     // MARK: - Extra functions
@@ -73,6 +81,9 @@ class HomeViewController: UIViewController {
         self.view.insertSubview(imgView, at: 0)
         setLocalization()
         
+        
+        self.btnSWitchMode.isOn = UserDefaults.standard.bool(forKey: "isDarkEnable") ? true : false
+        self.btnSWitchModeAct(self.btnSWitchMode)
         self.btnSwitchLang.isOn = Localize.currentLanguage() == "hi" ? true : false
     }
     // MARK: - APIs

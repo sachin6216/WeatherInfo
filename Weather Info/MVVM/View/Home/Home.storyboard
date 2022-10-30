@@ -32,13 +32,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF7-tz-Mdg">
-                                <rect key="frame" x="20" y="136.33333333333334" width="353" height="0.0"/>
+                                <rect key="frame" x="20" y="182.33333333333334" width="353" height="0.0"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUT-17-Mht">
-                                <rect key="frame" x="20" y="166.33333333333334" width="353" height="420.66666666666663"/>
+                                <rect key="frame" x="20" y="212.33333333333334" width="353" height="420.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q71-gL-irh">
                                         <rect key="frame" x="25" y="25" width="100" height="100"/>
@@ -54,7 +54,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-k6-Ihq">
-                                        <rect key="frame" x="328" y="75" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="328" y="74.999999999999972" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Medium" family="Open Sans" pointSize="50"/>
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
@@ -109,7 +109,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29k-vp-jeX">
-                                                        <rect key="frame" x="15" y="48.333333333333321" width="0.0" height="113.66666666666669"/>
+                                                        <rect key="frame" x="15" y="48.333333333333314" width="0.0" height="113.66666666666669"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -197,14 +197,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsw-KG-nnm">
+                                <rect key="frame" x="20" y="131.66666666666666" width="77.333333333333329" height="20.666666666666657"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wca-dX-MwG">
+                                <rect key="frame" x="107.33333333333331" y="126.33333333333331" width="51" height="31"/>
+                                <connections>
+                                    <action selector="btnSWitchModeAct:" destination="Y6W-OH-hqX" eventType="valueChanged" id="8cE-wc-Lb6"/>
+                                </connections>
+                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UCU-QX-wAY">
-                                <rect key="frame" x="329" y="72.333333333333329" width="51" height="31"/>
+                                <rect key="frame" x="324" y="126.33333333333331" width="51" height="31"/>
                                 <connections>
                                     <action selector="btnSwitchAct:" destination="Y6W-OH-hqX" eventType="valueChanged" id="RWm-2a-ylr"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="हिन्दी" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-M6-Fpa">
-                                <rect key="frame" x="291" y="77.333333333333329" width="28" height="20.666666666666671"/>
+                                <rect key="frame" x="286" y="131.66666666666666" width="28" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
@@ -213,22 +225,27 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Blue"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UCU-QX-wAY" secondAttribute="trailing" constant="15" id="07O-n6-6bt"/>
-                            <constraint firstItem="PF7-tz-Mdg" firstAttribute="top" secondItem="rGa-Ce-GPp" secondAttribute="bottom" constant="35" id="5YX-we-mdR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UCU-QX-wAY" secondAttribute="trailing" constant="20" id="07O-n6-6bt"/>
+                            <constraint firstItem="Wca-dX-MwG" firstAttribute="centerY" secondItem="UCU-QX-wAY" secondAttribute="centerY" id="1eK-n9-rlS"/>
                             <constraint firstItem="rGa-Ce-GPp" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="8Ks-3l-E9K"/>
                             <constraint firstItem="rUT-17-Mht" firstAttribute="leading" secondItem="PF7-tz-Mdg" secondAttribute="leading" id="8RT-lS-kFb"/>
-                            <constraint firstItem="UCU-QX-wAY" firstAttribute="centerY" secondItem="rGa-Ce-GPp" secondAttribute="centerY" id="CKO-gK-OLQ"/>
+                            <constraint firstItem="Dsw-KG-nnm" firstAttribute="centerY" secondItem="Wca-dX-MwG" secondAttribute="centerY" id="Btz-KN-sKj"/>
                             <constraint firstItem="rUT-17-Mht" firstAttribute="trailing" secondItem="PF7-tz-Mdg" secondAttribute="trailing" id="Dlp-es-1Rk"/>
+                            <constraint firstItem="Wca-dX-MwG" firstAttribute="leading" secondItem="Dsw-KG-nnm" secondAttribute="trailing" constant="10" id="K9q-K1-0a2"/>
                             <constraint firstItem="rUT-17-Mht" firstAttribute="top" secondItem="PF7-tz-Mdg" secondAttribute="bottom" constant="30" id="UAg-Nv-uGF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PF7-tz-Mdg" secondAttribute="trailing" constant="20" id="ZYD-Dy-fWT"/>
                             <constraint firstItem="UCU-QX-wAY" firstAttribute="leading" secondItem="UI6-M6-Fpa" secondAttribute="trailing" constant="10" id="cUO-Do-u9R"/>
+                            <constraint firstItem="PF7-tz-Mdg" firstAttribute="top" secondItem="UCU-QX-wAY" secondAttribute="bottom" constant="25" id="eAo-IN-N0h"/>
                             <constraint firstItem="rGa-Ce-GPp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="iUT-zD-2dJ"/>
                             <constraint firstItem="PF7-tz-Mdg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="meL-U2-ld4"/>
+                            <constraint firstItem="Dsw-KG-nnm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="pEg-St-CCD"/>
+                            <constraint firstItem="UCU-QX-wAY" firstAttribute="top" secondItem="rGa-Ce-GPp" secondAttribute="bottom" constant="25" id="x1Z-Wh-0ip"/>
                             <constraint firstItem="UI6-M6-Fpa" firstAttribute="centerY" secondItem="UCU-QX-wAY" secondAttribute="centerY" id="z9e-4R-Ms6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bgView" destination="rUT-17-Mht" id="shr-Dg-Lz1"/>
+                        <outlet property="btnSWitchMode" destination="Wca-dX-MwG" id="Bz5-xJ-CXr"/>
                         <outlet property="btnSwitchLang" destination="UCU-QX-wAY" id="25J-qc-9Mt"/>
                         <outlet property="imgWeatherIcon" destination="Q71-gL-irh" id="IZg-DO-wH4"/>
                         <outlet property="lblHeader" destination="rGa-Ce-GPp" id="ia7-4S-LK2"/>
