@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var btnSwitchLang: UISwitch!
     // MARK: - Variables
     var viewModel = HomeViewModel()
-    private var subscriptions = Set<AnyCancellable>() //Cancellation
+    private var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -52,6 +52,7 @@ class HomeViewController: UIViewController {
         self.setLocalization()
     }
     // MARK: - Extra functions
+    /// Setting the localization on UIs
     fileprivate func setLocalization() {
         self.lblWind.text = "WIND".localized()
         self.lblPrep.text = "PRECIPTION".localized()
@@ -59,10 +60,9 @@ class HomeViewController: UIViewController {
         self.lblHeader.text = "WEATHERINFO".localized()
     }
     
+    /// Set UI properties
     func setUITheme() {
-        
         self.imgWeatherIcon.layer.cornerRadius = self.imgWeatherIcon.frame.height / 2
-        
         self.bgView.layer.cornerRadius = 20
         self.bgView.layer.shadowColor = UIColor.lightGray.cgColor
         self.bgView.layer.shadowOffset = .zero
@@ -76,6 +76,7 @@ class HomeViewController: UIViewController {
         self.btnSwitchLang.isOn = Localize.currentLanguage() == "hi" ? true : false
     }
     // MARK: - APIs
+    /// Subscribe the publisher to get callbacks from the change events.
     func subscribers() {
         self.viewModel.getWeatherDetailsPublisher.sink { _ in
             self.lblLoc.text = "\(self.viewModel.model.dataResponse?.location?.name ?? ""), \(self.viewModel.model.dataResponse?.location?.region ?? ""), \(self.viewModel.model.dataResponse?.location?.country ?? "")"

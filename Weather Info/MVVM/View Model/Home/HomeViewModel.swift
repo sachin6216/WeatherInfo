@@ -15,7 +15,7 @@ class HomeViewModel {
     }
     let getWeatherDetailsSubject = PassthroughSubject<String, Never>()
     
-    
+    /// Get current Weather from the API
     func getCurrentWeather(controller: UIViewController) {
         Connectivity.shared.startLoad()
         HomeEndPoint.getCurrentWeather(query: self.model.currentLoc ?? "Chandigarh").instance.executeQuery { (response: GetWeather) in

@@ -63,22 +63,22 @@
                                         <rect key="frame" x="25" y="176.66666666666663" width="303" height="177"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGj-RU-7wo">
-                                                <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="177"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="177"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnD-IU-Svq">
-                                                        <rect key="frame" x="15.000000000000004" y="14.999999999999998" width="63.333333333333343" height="23.333333333333329"/>
+                                                        <rect key="frame" x="15.000000000000007" y="14.999999999999998" width="115.66666666666669" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dda-Ib-OPq">
-                                                        <rect key="frame" x="15.000000000000004" y="48.333333333333321" width="63.333333333333343" height="113.66666666666669"/>
+                                                        <rect key="frame" x="15.000000000000007" y="48.333333333333321" width="115.66666666666669" height="113.66666666666669"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRx-Xw-D3n">
-                                                        <rect key="frame" x="93.333333333333343" y="0.0" width="1" height="177"/>
+                                                        <rect key="frame" x="145.66666666666666" y="0.0" width="1" height="177"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="fNE-aI-Wv4"/>
@@ -99,23 +99,23 @@
                                                     <constraint firstAttribute="bottom" secondItem="dda-Ib-OPq" secondAttribute="bottom" constant="15" id="sCS-CN-xlj"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edF-ao-Kvj">
-                                                <rect key="frame" x="104.33333333333334" y="0.0" width="94.333333333333343" height="177"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edF-ao-Kvj">
+                                                <rect key="frame" x="151.66666666666666" y="0.0" width="30" height="177"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vy-bY-Quu">
-                                                        <rect key="frame" x="15" y="15.000000000000004" width="64.333333333333329" height="46.333333333333343"/>
+                                                        <rect key="frame" x="15" y="14.999999999999998" width="0.0" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29k-vp-jeX">
-                                                        <rect key="frame" x="15" y="71.333333333333314" width="64.333333333333329" height="90.666666666666686"/>
+                                                        <rect key="frame" x="15" y="48.333333333333321" width="0.0" height="113.66666666666669"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ec-HM-6YS">
-                                                        <rect key="frame" x="93.333333333333314" y="0.0" width="1" height="177"/>
+                                                        <rect key="frame" x="29" y="0.0" width="1" height="177"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="IgJ-OH-IHI"/>
@@ -137,16 +137,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hi6-X4-uAN">
-                                                <rect key="frame" x="208.66666666666666" y="0.0" width="94.333333333333343" height="177"/>
+                                                <rect key="frame" x="156.66666666666663" y="0.0" width="146.33333333333337" height="177"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUQ-dO-4b7">
-                                                        <rect key="frame" x="15.000000000000028" y="15.000000000000004" width="64.333333333333329" height="46.333333333333343"/>
+                                                        <rect key="frame" x="14.999999999999993" y="14.999999999999998" width="116.33333333333331" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ5-NF-uc3">
-                                                        <rect key="frame" x="15.000000000000028" y="71.333333333333314" width="64.333333333333329" height="90.666666666666686"/>
+                                                        <rect key="frame" x="14.999999999999993" y="48.333333333333321" width="116.33333333333331" height="113.66666666666669"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -254,7 +254,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightBlue">
-            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92100000381469727" green="0.92100000381469727" blue="0.92100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
