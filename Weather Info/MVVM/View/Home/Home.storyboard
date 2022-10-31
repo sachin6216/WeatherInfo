@@ -47,8 +47,8 @@
                                             <constraint firstAttribute="width" secondItem="Q71-gL-irh" secondAttribute="height" multiplier="1:1" id="gnK-xh-Wuo"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kb-bY-ul7">
-                                        <rect key="frame" x="75" y="137.99999999999997" width="0.0" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kb-bY-ul7">
+                                        <rect key="frame" x="25" y="137.99999999999997" width="303" height="0.0"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
@@ -103,13 +103,13 @@
                                                 <rect key="frame" x="151.66666666666666" y="0.0" width="30" height="177"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vy-bY-Quu">
-                                                        <rect key="frame" x="15" y="14.999999999999998" width="0.0" height="23.333333333333329"/>
+                                                        <rect key="frame" x="15" y="15.000000000000007" width="0.0" height="113.66666666666669"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29k-vp-jeX">
-                                                        <rect key="frame" x="15" y="48.333333333333321" width="0.0" height="113.66666666666669"/>
+                                                        <rect key="frame" x="15" y="138.66666666666663" width="0.0" height="23.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -181,14 +181,15 @@
                                     <constraint firstItem="BPw-k6-Ihq" firstAttribute="centerY" secondItem="Q71-gL-irh" secondAttribute="centerY" id="58F-vN-QzN"/>
                                     <constraint firstItem="Q71-gL-irh" firstAttribute="leading" secondItem="rUT-17-Mht" secondAttribute="leading" constant="25" id="689-yS-OGC"/>
                                     <constraint firstItem="xte-O2-QM4" firstAttribute="centerX" secondItem="rUT-17-Mht" secondAttribute="centerX" id="J0M-NK-17U"/>
+                                    <constraint firstItem="7kb-bY-ul7" firstAttribute="leading" secondItem="Q71-gL-irh" secondAttribute="leading" id="MjP-04-bud"/>
                                     <constraint firstItem="Q71-gL-irh" firstAttribute="top" secondItem="rUT-17-Mht" secondAttribute="top" constant="25" id="OpZ-dr-dgN"/>
                                     <constraint firstItem="7kb-bY-ul7" firstAttribute="top" secondItem="Q71-gL-irh" secondAttribute="bottom" constant="13" id="RuZ-lQ-Znu"/>
                                     <constraint firstItem="Vug-qs-UiZ" firstAttribute="leading" secondItem="Q71-gL-irh" secondAttribute="leading" id="c0F-tb-iWi"/>
+                                    <constraint firstItem="7kb-bY-ul7" firstAttribute="trailing" secondItem="BPw-k6-Ihq" secondAttribute="trailing" id="jaS-41-qZ4"/>
                                     <constraint firstAttribute="trailing" secondItem="BPw-k6-Ihq" secondAttribute="trailing" constant="25" id="mkV-yL-E7B"/>
                                     <constraint firstAttribute="bottom" secondItem="xte-O2-QM4" secondAttribute="bottom" constant="25" id="mtv-Zl-GA3"/>
                                     <constraint firstItem="Vug-qs-UiZ" firstAttribute="top" secondItem="7kb-bY-ul7" secondAttribute="bottom" constant="38.666666666666657" id="nq6-KY-A9i"/>
                                     <constraint firstItem="Vug-qs-UiZ" firstAttribute="trailing" secondItem="BPw-k6-Ihq" secondAttribute="trailing" id="sok-tw-Mxg"/>
-                                    <constraint firstItem="7kb-bY-ul7" firstAttribute="centerX" secondItem="Q71-gL-irh" secondAttribute="centerX" id="wy9-GM-H2h"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGa-Ce-GPp">

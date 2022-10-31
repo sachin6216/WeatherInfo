@@ -34,10 +34,11 @@ class LocationManager: NSObject {
     // MARK: - Start Updating Locations
     /// Get Location request from the user
     func startUpdatingLocation() {
-        if CLLocationManager.authorizationStatus() == .notDetermined || CLLocationManager.authorizationStatus() == .denied || CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||  CLLocationManager.authorizationStatus() == .restricted ||  CLLocationManager.authorizationStatus() == .restricted {
+        if CLLocationManager.authorizationStatus() == .notDetermined || CLLocationManager.authorizationStatus() == .denied ||  CLLocationManager.authorizationStatus() == .restricted ||  CLLocationManager.authorizationStatus() == .restricted {
             self.locationManager?.requestAlwaysAuthorization()
+        } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             self.locationManager?.requestWhenInUseAuthorization()
-        } else {
+        }  else {
             self.locationManager?.startUpdatingLocation()
             self.locationManager?.startUpdatingHeading()
         }

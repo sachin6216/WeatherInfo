@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
     }
     // MARK: - IBActions
     @IBAction func btnReload(_ sender: UIButton) {
-        self.viewModel.getCurrentWeather(controller: self)
+        LocationManager.sharedInstance.startUpdatingLocation()
     }
     @IBAction func btnSWitchModeAct(_ sender: UISwitch) {
         let appDelegate = UIApplication.shared.windows.first
