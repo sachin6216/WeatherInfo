@@ -38,10 +38,9 @@ class LocationManager: NSObject {
             self.locationManager?.requestAlwaysAuthorization()
         } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             self.locationManager?.requestWhenInUseAuthorization()
-        }  else {
-            self.locationManager?.startUpdatingLocation()
-            self.locationManager?.startUpdatingHeading()
         }
+        self.locationManager?.startUpdatingLocation()
+        self.locationManager?.startUpdatingHeading()
     }
     // MARK: - Stop Updating Locations
     func stopUpdatingLocation() {
