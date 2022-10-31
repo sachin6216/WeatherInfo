@@ -20,12 +20,12 @@ class HomeViewModel {
         Connectivity.shared.startLoad()
         HomeEndPoint.getCurrentWeather(query: self.model.currentLoc ?? "Chandigarh").instance.executeQuery { (response: GetWeather) in
             Connectivity.shared.endLoad()
-            if response.current != nil {
+//            if response.current != nil {
                 self.model.dataResponse = response
                 self.getWeatherDetailsSubject.send("")
-            } else {
-                controller.showalertview(messagestring: "Something went worng")
-            }
+//            } else {
+//                controller.showalertview(messagestring: "Something went worng")
+//            }
         } error: { (errorMsg) in
             Connectivity.shared.endLoad()
             controller.showalertview(messagestring: errorMsg ?? "")
