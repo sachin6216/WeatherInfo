@@ -29,11 +29,12 @@ class LocationManager: NSObject {
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         //        self.locationManager?.distanceFilter = 5
         self.locationManager?.requestAlwaysAuthorization()
+        self.locationManager?.requestWhenInUseAuthorization()
     }
     // MARK: - Start Updating Locations
     /// Get Location request from the user
     func startUpdatingLocation() {
-        if CLLocationManager.authorizationStatus() == .notDetermined || CLLocationManager.authorizationStatus() == .denied || CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||  CLLocationManager.authorizationStatus() == .restricted {
+        if CLLocationManager.authorizationStatus() == .notDetermined || CLLocationManager.authorizationStatus() == .denied || CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||  CLLocationManager.authorizationStatus() == .restricted ||  CLLocationManager.authorizationStatus() == .restricted {
             self.locationManager?.requestAlwaysAuthorization()
             self.locationManager?.requestWhenInUseAuthorization()
         } else {
@@ -125,7 +126,7 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .notDetermined {
+            CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .notDetermined || CLLocationManager.authorizationStatus() == .restricted {
             guard let currentLoc = locationManager?.location else {
                 //                self.showalertview(messagestring: "PLEASEALLOWLOCATION".localize())
                 return
@@ -133,7 +134,7 @@ extension LocationManager: CLLocationManagerDelegate {
             coordinates = currentLoc.coordinate
             delegate?.locationManager?(manager, didUpdateLocations: locations)
         }
-        locationManager?.stopUpdatingLocation()
+//        locationManager?.stopUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         coordinates = locationManager?.location?.coordinate
